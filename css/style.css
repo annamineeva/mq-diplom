@@ -72,7 +72,7 @@ body {
   background-color: #F5F7F6;
   border-style: none;
   overflow: hidden;
-  width: 260px;
+  width: 296px;
 
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 #popup {
-  width: 280px;
+  width: 320px;
 }
 
 .popup__desc_radio {
@@ -122,7 +122,7 @@ body {
 #textarea {
   background-color: #F5F7F6;
   border-style: none;
-  width: 250px;
+  width: 282px;
   padding: 14px;
   height: 85px;
 }
@@ -136,19 +136,22 @@ body {
   right: 0;
   top: -24px;
 }
+.popup_button {
+  width: 310px; 
+}
 
-.aside {
+.trend {
   padding-top: 28px;
 
 }
 
-.aside__row {
+.trend__row {
   display: flex;
   margin: auto;
   margin-top: 27px;
 }
 
-.aside__row_heading::after {
+.trend__row_heading::after {
   content: " ";
   display: block;
   height: 3px;
@@ -158,7 +161,7 @@ body {
   margin-top: 9px;
 }
 
-.aside__row_list {
+.trend__row_list {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -166,12 +169,12 @@ body {
   width: 25%;
 }
 
-.aside__row_list img {
+.trend__row_list img {
   width: 100%;
 
 }
 
-.aside__row_list::after {
+.trend__row_list::after {
   content: " ";
   background: #000;
   opacity: 0.5;
@@ -183,18 +186,18 @@ body {
   z-index: 2;
 }
 
-.aside__row_list:nth-child(2) {
+.trend__row_list:nth-child(2) {
   width: calc(25% - 3px);
   margin-left: 3px;
 }
 
-.aside__row_list:nth-child(3) {
+.trend__row_list:nth-child(3) {
   margin-left: 3px;
   width: calc(25% - 6px);
   margin-right: 3px;
 }
 
-.aside__row_content {
+.trend__row_content {
   position: absolute;
   bottom: 0;
   text-transform: uppercase;
@@ -202,7 +205,7 @@ body {
   z-index: 3;
 }
 
-.header__content_aside {
+.header__content_trend {
   border: 3px solid #B7A263;
   padding: 10px;
 }
@@ -296,8 +299,10 @@ a:hover {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
-  top: 28%;
-  left: 26%;
+  top: 34%;
+  left: 0;
+  right: 0;
+  margin: auto;
   line-height: 75px;
   z-index: 2;
   position: absolute;
@@ -308,6 +313,8 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .main {
@@ -593,7 +600,9 @@ a:hover {
   display: inline-block;
   vertical-align: super;
 }
-
+.benefits {
+  margin-top: -34px;
+}
 .socials__icon {
   list-style-type: none;
   display: flex;
@@ -603,7 +612,7 @@ a:hover {
   width: 1175px;
   margin: auto;
   padding: 0;
-  margin-top: 320px;
+  margin-top: 292px;
 }
 
 .socials__icon_dribbble {
@@ -644,7 +653,7 @@ a:hover {
 }
 
 .copyright {
-  margin-top: 97px;
+  margin-top: 74px;
   text-align: center;
   margin-bottom: 70px;
   display: block;
@@ -656,22 +665,24 @@ a:hover {
 }
 
 .popup_button {
-  width: 280px;
+  width: 310px;
 }
 
-.aside__row_heading {
+.trend__row_heading {
   text-align: center;
   font-size: 20px;
 }
 
-.aside__row_title {
+.trend__row_title {
   color: white;
 }
 
 .benefits__list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 2% 8%;
 }
 
 .benefits__title {
@@ -717,7 +728,7 @@ a:hover {
 .benefits__footer {
   display: flex;
   justify-content: space-between;
-  padding-top: 28px;
+  padding-top: 16px;
 }
 
 .benefits__button {
@@ -740,14 +751,26 @@ a:hover {
   display: block;
 }
 @media (min-width: 641px) and (max-width: 1200px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  .popup_button {
+    width: 310px;
+  }
   .heading {
       background-image: url(../img/banner-bg-tablet.jpg);
-      padding-bottom: 553px;
+      
      
   }
   .logo {
       width: 162px;
       padding-top: 43px;
+      padding-left: 4%;
+  }
+  .menu {
+    margin-top: 4%;
+    
+    justify-content: space-between;
   }
   .menu__item {
       display: none;
@@ -755,6 +778,7 @@ a:hover {
   .burger {
       position: relative;
       display: block;
+      margin-right: 8%;
     }
   .menu__burger_btn,
   .menu__burger_btn::before,
@@ -809,8 +833,8 @@ a:hover {
   }
   .header_label {
       font-size: 38px;
-      line-height: 66px;
-      top: 33%;
+      line-height: 55px;
+      top: 47%;
       margin-left: auto;
       margin-right: auto;
       left: 0;
@@ -818,24 +842,33 @@ a:hover {
       width: 641px;
   }
   .widget_title {
-      margin-top: o;
+      
+      margin-bottom: 20px;
   }
-  .aside__row {
+  .widget__col {
+    margin-right: 0;
+  }
+  .trend {
+    padding-top: 10px;
+  }
+  .trend__row {
       flex-wrap: wrap;
+      margin-top: 20px;
   }
-  .aside__row_list {
+  .trend__row_list {
       width: 50%;
+      height: 246px;
   }
-  .aside__row_list:nth-child(2) {
+  .trend__row_list:nth-child(2) {
       width: calc(50% - 3px);
   }
   
-  .aside__row_list:nth-child(3) {
+  .trend__row_list:nth-child(3) {
      width: 50%; 
       margin-top: 3px;
       margin-left: 0;
   }
-  .aside__row_list:nth-child(4) {
+  .trend__row_list:nth-child(4) {
       margin-top: 3px;
       width: calc(50% - 3px);
   }
@@ -843,13 +876,28 @@ a:hover {
       margin-left: 4%;
       width: 641px;
   }
+  .content {
+    padding-left: 1%;
+    padding-right: 5%;
+  }
   .article {
       display: block;
+      margin-bottom: 33px;
   }
+  .article:nth-child(3) {
+    margin-bottom: 55px;
+  }
+  
   .article_content {
       margin: 0;
       width: 367px;
       border-bottom: 3px #A4A4A4 solid;
+  }
+  .sidebar {
+    margin-top: 24px;
+  }
+  .form {
+    margin-top: 48px;
   }
   .header__content {
       margin-top: 9px;
@@ -858,10 +906,14 @@ a:hover {
   .article_content_child {
       border-bottom: 0;
   }
+  .benefits {
+    margin-top: -9px;
+  }
   .benefits__list {
       flex-wrap: wrap;
       justify-content: normal;
       padding: 0;
+      margin: 3% 2%;
   }
   .benefits__list_item {
       min-width: 50%;
@@ -880,16 +932,29 @@ a:hover {
   } 
   .socials__icon {
       width: 94%;
-  }  
+  } 
+  .copyright {
+    margin-top: 48px;
+  } 
 }
+
 @media (max-width: 640px) {
   .heading {
       background-image: url(../img/banner-mobile.jpg);
       padding-bottom: 679px;
      
   }
+  .popup_button {
+    width: 280px;
+  }
   .popup_conent {
       width: 320px;
+  }
+  .popup__desc_select {
+    width: 261px;
+  }
+  #textarea {
+    width: 252px;
   }
   .logo {
       width: 270px;
@@ -902,12 +967,13 @@ a:hover {
   .burger {
       position: relative;
       display: block;
-      margin-right: 3%;
+      margin-right: 1%;
+      margin-top: 15px;
     }
   .menu__burger_btn,
   .menu__burger_btn::before,
   .menu__burger_btn::after {
-      width: 30px;
+      width: 27px;
       height: 3px;
       content: " ";
       background: white;
@@ -915,11 +981,11 @@ a:hover {
     }
   .menu__burger_btn::before {
       position: absolute;
-      top: 33px;
+      top: 57px;
     }
   .menu__burger_btn::after {
       position: absolute;
-      top: 48px;
+      top: 72px;
     }
   #menu__burger:hover {
       cursor: pointer;
@@ -959,7 +1025,7 @@ a:hover {
   .header_label {
       font-size: 25px;
       line-height: 34px;
-      top: 51%;
+      top: 53%;
       width: 285px;
       margin-left: auto;
       margin-right: auto;
@@ -967,26 +1033,34 @@ a:hover {
       right: 0;
       
   }
-  .aside__row {
-      flex-direction: column;
+  .trend {
+    padding-top: 6px;
   }
-  .aside__row_list {
+  .trend__row_heading {
+    font-size: 17px;
+  }
+  .trend__row {
+      flex-direction: column;
+      margin-top: 21px;
+  }
+  .trend__row_list {
       width: 100%;
       margin-top: 1%;
+      height: 231px;
   }
-  .aside__row_list:nth-child(2) {
+  .trend__row_list:nth-child(2) {
       width: 100%;
       margin-left: 0;
   }
   
-  .aside__row_list:nth-child(3) {
+  .trend__row_list:nth-child(3) {
       width: 100%;
       margin-left: 0;
   }
   .main {
       margin: auto;
       width: 350px;
-      margin-top: 32px;
+      margin-top: 31px;
   }
   .content {
       flex-direction: column;
@@ -994,6 +1068,7 @@ a:hover {
   .article {
       display: block;
       width: 350px;
+      margin-bottom: 28px;
   }
   .article_content {
       margin: 0;
@@ -1011,6 +1086,46 @@ a:hover {
       margin-top: 9px;
       
   }
+  .header__content_all {
+    font-size: 17px;
+  }
+  .header__content_sibtitle {
+    padding-top: 8px;
+  }
+  .article_text {
+    padding-top: 0;
+  }
+  .btn {
+    margin-top: 34px;
+  }
+  .button_text {
+    width: 268px;
+  }
+  .mailing_email {
+    margin-top: 25px;
+  }
+  .mailing_input {
+    width: 311px;
+  }
+  .mailing_button {
+    width: 331px;
+  }
+  .popup_button {
+    width: 280px;
+  }
+  
+  .meta {
+    margin-top: 40px;
+  }
+  .features {
+    margin-top: 38px;
+  }
+  .benefits {
+    margin-top: 0;
+  }
+  .widget_title {
+    margin-top: 34px;
+  }
   .sidebar {
       margin: auto;
       width: 331px;
@@ -1019,13 +1134,18 @@ a:hover {
       flex-wrap: wrap;
       justify-content: normal;
       padding: 0;
+      margin-top: 27px;
   }
   .benefits__list_item {
       min-width: 100%;
       text-align: center;
   }
+  .benefits__list_item img {
+    height: 281px;
+    width: 282px;
+  }
   .benefits__list_item:nth-child(2) {
-      margin-top: 268px;
+      margin-top: 214px;
    } 
   .benefits__list_item:nth-child(3) {
      margin-top: 268px;
@@ -1040,5 +1160,59 @@ a:hover {
   }
   .socials__icon {
       width: 90%;
+      margin-top: 242px;
   }  
+  .copyright {
+    margin-top: 52px;
+  }
+  .socials__icon {
+    min-width: 331px;
+    width: 57%;
+  }
+}
+@media (min-width: 641px) and (max-width: 1200px) and (orientation:landscape) {
+  .trend__row_list {
+    width: 25%;
+  }
+  .trend__row_list:nth-child(2) {
+    width: calc(25% - 3px);
+    margin-left: 3px;
+  }
+  
+  .trend__row_list:nth-child(3) {
+    margin-left: 3px;
+    width: calc(25% - 6px);
+    margin-right: 3px;
+    margin-top: 0;
+  }
+  .trend__row_list:nth-child(4) {
+    margin-top: 0px;
+    width: calc(25% - 3px);
+  }
+}
+@media (max-width: 640px)  and (orientation:landscape) {
+  
+  .trend__row {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 21px;
+}
+  .trend__row_list {
+    width: 50%;
+    height: 246px;
+}
+.trend__row_list:nth-child(2) {
+    width: calc(50% - 3px);
+    margin-left: 3px;
+}
+
+.trend__row_list:nth-child(3) {
+    width: 50%; 
+    margin-top: 3px;
+    margin-left: 0;
+}
+.trend__row_list:nth-child(4) {
+    margin-top: 3px;
+    width: calc(50% - 3px);
+}
 }
